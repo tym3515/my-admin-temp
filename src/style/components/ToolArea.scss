@@ -1,0 +1,40 @@
+
+[data-component='ToolArea'] {
+  &.open {
+    //width: 80%;
+    display: flex;
+  }
+
+  &.width {
+    --widthA: 26rem;
+    --widthB: calc(100% - var(--widthA));
+    --widthC: calc(var(--widthB) / 2);
+    width: var(--widthA);
+    left: var(--widthC);
+  }
+}
+
+@media (min-width: 320px) and (max-width: 680px) {
+
+}
+
+@media (min-width: 680px) {
+
+}
+
+@media (min-width: 900px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}
+
+@media (min-width: 1400px) {
+
+}
+
+@media (min-width: 1600px) {
+
+}
+

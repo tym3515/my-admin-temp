@@ -1,0 +1,127 @@
+[data-component='Header'] {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  //height: 3rem;
+  //line-height: 3rem;
+  background: var(--background-color);
+  background-color: #393D49;
+  border-bottom: 3px solid var(--header-border-color);
+  border-bottom: 3px solid #1890ff;
+  color: var(--font-color);
+  color:#A6ADB4;
+
+  .logo-box{
+    height: 100%;
+    >a{
+      display: block;
+      height: 100%;
+      line-height:var(--heightH);
+      line-height:3rem;
+      text-align: center;
+      img{
+        height: 100%;
+        object-fit: contain;
+        display: inline-block;
+        position: relative;
+        top: -4px;
+      }
+      span {
+        color: var(--font-color);
+        color:#A6ADB4;
+        font-size: 22px;
+        font-weight: 900;
+
+        &:hover{
+          color: var(--hover-font-color);
+          color: #FFFFFF;
+        }
+      }
+    }
+  }
+  
+  .head-center{
+    flex: 1;
+    height: 100%;
+    position: relative;
+  }
+  .avatar-box{
+    cursor: pointer;
+    margin: 0 15px;
+  }
+
+  .right-box{
+    margin: 0 8px;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .top-btn{
+    cursor: pointer;
+    display: block;
+    line-height: 3rem;
+    height: 3rem;
+  }
+  .log-out{
+    // padding: 16.5px 4px;
+  }
+  .username{
+    color:red;
+  }
+  [data-component='HeaderTabs'] {
+    height: 3rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    //background: #000;
+
+    .ant-tabs{
+      height: 100%;
+
+      .ant-tabs-bar{
+        margin-bottom: 0;
+        border-bottom: none;
+        height: 100%;
+
+        .ant-tabs-nav-container{
+          margin-bottom: 0;
+          height: 100%;
+
+          .ant-tabs-nav-wrap{
+            .ant-tabs-nav .ant-tabs-tab{
+              //padding: 14.35px 16px;
+              color: var(--font-color);
+              color:#A6ADB4;
+              height: 3rem;
+
+              &:hover{
+                color: var(--hover-font-color);
+                color: #FFFFFF;
+              }
+            }
+            .ant-tabs-ink-bar-animated{
+              //display: none !important;
+              height: 3px;
+              bottom: 0px;
+              background: #FFFBE6;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+
+.edit-modal{
+  .ant-modal-body{
+    //.ant-row{
+    //
+    //}
+  }
+}

@@ -1,0 +1,243 @@
+body {
+  margin: 0;
+  font-family: -apple-system, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color:transparent;
+  -webkit-text-size-adjust:none;/* 使用webkit的私有属性，让字体大小不受设备终端的调整，可定义字体大小小于12px */
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  //-webkit-touch-callout: none;
+  //-webkit-user-select: none;
+  //-khtml-user-select: none;
+  //-moz-user-select: none;
+  //-ms-user-select: none;
+  //user-select: none;
+}
+/*样式重置*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+  display: block;
+}
+img {
+  border:0 none; /*有些浏览器默认这些标签有边框，所以要清除默认边框*/
+  display: block;
+
+  /*解决移动端图片基线对齐的问题*/
+  //元素不能成为鼠标事件的target
+  // pointer-events:none;
+  -webkit-pointer-events:none;
+  -ms-pointer-events:none;
+  -moz-pointer-events:none;
+}
+ol,ul {
+  list-style:none; /*清除列表默认样式*/
+}
+input {
+  padding: 0;
+  outline :none;
+  font-family: inherit;
+  background-color: transparent;
+}
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+address,caption,cite,code,dfn,em,i,u,b,strong,th,var {
+  font-style:normal;
+  font-weight:normal;
+  /*清除标签默认文本样式和加粗*/
+}
+a,input,button {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color:transparent;
+  /*用于设定元素在移动设备（如Adnroid、iOS）上被触发点击事件时，响应的背景框的颜色。*/
+  /*-webkit-appearance: none;*/
+  /*解决移动端安卓和ios下不同浏览器对于按钮的样式渲染不一样的问题*/
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="file"]{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis
+}
+a{
+  &:hover{
+    color: var(--hover-font-color);
+    color: #FFFFFF;
+  }
+}
+/*自定义共用类*/
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+//清除浮动
+.clear:after {
+  content: '';
+  display: block;
+  clear: both;
+  height:0;
+}
+//清除垂直外边距溢出
+.clearbox:before{
+  display:table;
+  clear:both;
+  content:"";
+  height:0
+}
+.clear{
+  zoom: 1;
+}
+.center{
+  margin:0 auto;
+}
+.tc{
+  text-align: center;
+}
+.tcenter{
+  margin:0 auto;
+  text-align: center;
+}
+
+.flex{
+  display: flex;
+}
+.flex-cm{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-right{
+  justify-content: flex-end;
+}
+.flex-c{
+  display: flex;
+  align-items: center;
+}
+.flex-m{
+  display: flex;
+  justify-content: center;
+}
+.flex-clom{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.text-left{
+  text-align: left;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 8px;
+  background-color: #F5F5F5;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: #5F5E5E;
+}
+
+.red{
+  color :red !important;
+}
+
+.h2000{
+  height: 2000px;
+}
+
+.mr10{
+  margin-right: 10px;
+}
+
+.download{
+  color: #2f54eb;
+  padding: 0 8px;
+  cursor: pointer;
+}
+
+.add-user-from{
+  width: 10rem;
+}
+
+/*
+  ant reset style
+*/
+
+.ant-row{
+  display: flex;
+}
+.ant-form-item-label{
+  width: 6em;
+  text-align: left;
+}
+.ant-form-item-control-wrapper{
+  flex: 1;
+}
+
+.ant-message-custom-content{
+  display: flex;
+}
+.ant-table-tbody > tr > td,
+.ant-table-thead > tr > th{
+  text-align: center;
+}
+/*
+  ant reset
+*/

@@ -1,0 +1,41 @@
+//@mixin placeholder($block){
+//	&::-webkit-input-placeholder
+//	{$block}
+//	&:-moz-placeholder
+//	{$block}
+//	&::-moz-placeholder
+//	{$block}
+//	&:-ms-input-placeholder
+//	{$block}
+//}
+
+
+@mixin text-fill-color($arguments){
+	-webkit-text-fill-color: $arguments;
+	-moz-text-fill-color: $arguments;
+	text-fill-color: $arguments;
+}
+//
+//@mixin mobile($block){
+//	@media (max-device-width: 720px)
+//	{$block}
+//}
+//
+//@mixin desktop($block){
+//	@media (min-device-width: 721px)
+//	{$block}
+//}
+
+@mixin AppearFadeIn($duration:1s, $enterOpacity : 0, $activeOpacity : 1){
+	will-change: opacity;
+
+	&.Appear-appear{
+		opacity: $enterOpacity;
+	}
+
+	&.Appear-appear.Appear-appear-active{
+		transition-property: opacity;
+		transition-duration: $duration;
+		opacity: $activeOpacity;
+	}
+}
